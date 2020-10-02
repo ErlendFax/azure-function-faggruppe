@@ -23,7 +23,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     if klasse and alder and kjonn:
         prediction_raw = loaded_model.predict([min_data])[0]
         prediction_string = "Yes!" if prediction_raw == 1 else "No..."
-        return func.HttpResponse(f"This HTTP triggered function executed successfully. Did i survive? {prediction_string}")
+        return func.HttpResponse(f"This HTTP triggered function executed successfully. Can I get a loan? {prediction_string}")
     else:
         return func.HttpResponse(
              "This HTTP triggered function execution, but query parameters were not correct. Pass them in the query string a prediction response.",
