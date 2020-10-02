@@ -1,24 +1,31 @@
 import logging
-
+import pickle
 import azure.functions as func
+import os
+import sklearn
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
-    logging.info('Python HTTP trigger function processed a request.')
 
-    name = req.params.get('name')
-    if not name:
-        try:
-            req_body = req.get_json()
-        except ValueError:
-            pass
-        else:
-            name = req_body.get('name')
-
-    if name:
-        return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully.")
+    klasse = req.params.get('klasse')
+    alder = req.params.get('alder')
+    kjonn = req.params.get('kjonn')
+    min_data = [klasse, kjonn, alder]
+    
+    try:
+        filename = 'finalized_model.sav'
+        loaded_model = pickle.load(open(filename, 'rb'))
+    except Exception:
+        logging.error("Could not load model.")
+    else:
+        logging.info("Model successfully loaded.")
+    
+    if klasse and alder and kjonn:
+        prediction_raw = loaded_model.predict([min_data])[0]
+        prediction_string = "Yes!" if prediction_raw == 1 else "No..."
+        return func.HttpResponse(f"This HTTP triggered function executed successfully. Did i survive? {prediction_string}")
     else:
         return func.HttpResponse(
-             "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
+             "This HTTP triggered function execution, but query parameters were not correct. Pass them in the query string a prediction response.",
              status_code=200
         )
