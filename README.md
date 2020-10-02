@@ -1,5 +1,7 @@
 # Azure Function Faggruppemøte 6. okt. 2020
 
+_Fokuser på READMEen, og ikke så mye på repoet. Det er en noen unødvendige filer og folders i repoet, disse genereres automatisk i stegene 1-5 og kan overses. Hvis man står fast på steg nr. 8 kan man se en titt på __ init __ .py.
+
 ### Oppsett:
 
 Følg denne: https://docs.microsoft.com/en-us/azure/developer/python/tutorial-vs-code-serverless-python-01#visual-studio-code-python-and-the-azure-functions-extension
@@ -20,6 +22,6 @@ Hvis det trengs: https://marketplace.visualstudio.com/items?itemName=ms-azuretoo
 
 ### Lag en "smart" Azure Function:
 
-1. Legg finalized_model.sav i root folder. (Dette er egentlig en modell trent på Titanic dataen, men lat som det er heftige "customer predictions")
-2. Legg til scikit-learn i requirements.txt
-3. Skriv om __ init __ .py slik at man kan ta inn "klasse", "alder", og "kjonn", last inn finalized_model.sav, og kjør en prediksjon. 
+6. Legg finalized_model.sav i root folder. Denne filen finner du her i repoet. (Dette er egentlig en modell trent på Titanic dataen, men lat som det er heftige "bank customer predictions") 💳💸🏧
+7. Legg til _scikit-learn_ i requirements.txt
+8. Skriv om __ init __ .py slik at man kan ta inn "klasse", "alder", og "kjonn", last inn finalized_model.sav, og kjør en prediksjon. 
