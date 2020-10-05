@@ -1,6 +1,6 @@
 # Azure Function Faggruppemøte 6. okt. 2020
 
-Man trenger ikke å klone dette repoet! :D 
+Man trenger ikke å klone dette repoet! (╯°□°）╯︵ ┻━┻
 
 _Fokuser på READMEen, og ikke så mye på repoet. Det er en noen unødvendige filer og folders i repoet, disse genereres automatisk i stegene 1-5 og kan overses. Hvis man står fast på steg nr. 8 kan man ta en titt på __ init __ .py._
 
