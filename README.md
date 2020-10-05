@@ -2,7 +2,7 @@
 
 Man skal __ikke__ klone dette repoet! (╯°□°）╯︵ ┻━┻
 
-_Fokuser på READMEen, og ikke så mye på repoet. Det er en noen unødvendige filer og folders i repoet, disse genereres automatisk i stegene 1-5 og kan overses. Hvis man står fast på steg nr. 8 kan man ta en titt på __ init __ .py._
+_Fokuser på READMEen, og ikke så mye på repoet. Det er noen unødvendige filer og folders i repoet, disse genereres automatisk i stegene 1-5 og kan overses. Hvis man står fast på steg nr. 8 kan man ta en titt på __ init __ .py._
 
 ### Oppsett:
 
